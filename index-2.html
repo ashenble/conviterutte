@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rutte 90 Anos</title>
+<meta name="description" content="Você está convidado(a) para o aniversário de 90 anos de Rutte Dias Brêda, dia 28/11/2026 às 11h, no Méier, RJ.">
+<meta name="theme-color" content="#fff0e0">
+<meta property="og:title" content="Rutte 90 Anos">
+<meta property="og:description" content="Você está convidado(a) para o aniversário de 90 anos de Rutte Dias Brêda. Dia 28/11/2026, às 11h, no Méier, RJ.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap">
+<style>
+:root { color-scheme: light; }
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+/* Layout: full birthday art as hero, invitation text, party details, RSVP with a public list of answers, then a mural of notes. Pastel peach, rose, butter and sage. */
+:root {
+  --bg: #fff0e0;
+  --bg-glow: #ffd8b4;
+  --bg-glow2: #ffe6b3;
+  --surface: #fffaf2;
+  --fg: #5a3a28;
+  --muted: #84604a;
+  --accent: #a9500f;
+  --line: #f3d2b0;
+  --line-strong: #e8a96e;
+  --btn-1: #ffd2a4;
+  --btn-2: #ffb98a;
+  --btn-ink: #4a2410;
+  --btn-edge: #e39a5c;
+  --yes-bg: #d9ebdc;
+  --yes-ink: #35603f;
+  --maybe-bg: #fcefc0;
+  --maybe-ink: #6e5510;
+  --no-bg: #fbd5c8;
+  --no-ink: #8a3a22;
+  --danger: #a3262a;
+  --rose-line: #d4a017;
+  --font-script: "Great Vibes", "Snell Roundhand", cursive;
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Lora", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #2b2018;
+    --bg-glow: #4a3020;
+    --bg-glow2: #443820;
+    --surface: #38291d;
+    --fg: #f6e6d4;
+    --muted: #d6b79a;
+    --accent: #ffb878;
+    --line: #5c4330;
+    --line-strong: #85603f;
+    --btn-1: #f6c08e;
+    --btn-2: #f0a672;
+    --btn-ink: #3a2210;
+    --btn-edge: #cf8a4f;
+    --yes-bg: #31453a;
+    --yes-ink: #b7dcc0;
+    --maybe-bg: #4a4126;
+    --maybe-ink: #f0dc9a;
+    --no-bg: #4d322c;
+    --no-ink: #f5b5a8;
+    --danger: #ff9a9a;
+    --rose-line: #f2d56e;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #2b2018;
+  --bg-glow: #4a3020;
+  --bg-glow2: #443820;
+  --surface: #38291d;
+  --fg: #f6e6d4;
+  --muted: #d6b79a;
+  --accent: #ffb878;
+  --line: #5c4330;
+  --line-strong: #85603f;
+  --btn-1: #f6c08e;
+  --btn-2: #f0a672;
+  --btn-ink: #3a2210;
+  --btn-edge: #cf8a4f;
+  --yes-bg: #31453a;
+  --yes-ink: #b7dcc0;
+  --maybe-bg: #4a4126;
+  --maybe-ink: #f0dc9a;
+  --no-bg: #4d322c;
+  --no-ink: #f5b5a8;
+  --danger: #ff9a9a;
+  --rose-line: #f2d56e;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse at 12% 0%, var(--bg-glow) 0%, transparent 55%),
+    radial-gradient(ellipse at 92% 6%, var(--bg-glow2) 0%, transparent 50%);
+  background-repeat: no-repeat;
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  padding-block: 20px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px; position: relative; z-index: 1; }
+.center { text-align: center; }
+
+.photo {
+  margin: 0; border-radius: 14px; overflow: hidden;
+  border: 3px solid var(--line-strong);
+  box-shadow: 0 0 0 6px var(--bg), 0 0 0 7px var(--line), 0 18px 40px rgba(190, 110, 50, .22);
+  max-width: 100%;
+}
+.photo img { display: block; width: 100%; height: auto; }
+
+.flourish { display: flex; align-items: center; gap: 12px; width: min(320px, 80%); color: var(--line-strong); margin: 0 auto; }
+.flourish::before, .flourish::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, currentColor); }
+.flourish::after { transform: scaleX(-1); }
+.flourish svg { width: 18px; height: 18px; fill: currentColor; flex: none; }
+
+.invite { font-family: var(--font-script); font-weight: 400; font-size: clamp(2.8rem, 13vw, 4.4rem); margin: 14px 0 0; color: var(--accent); text-wrap: balance; line-height: 1.1; }
+.label { font-size: .78rem; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px; }
+.name { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 9vw, 2.8rem); margin: 0; color: var(--fg); line-height: 1.15; }
+.message { font-size: 1.12rem; text-wrap: pretty; margin: 0 auto; max-width: 36ch; }
+.message { display: flex; flex-direction: column; gap: 10px; }
+.message p { margin: 0; }
+.message .sweet { font-family: var(--font-display); font-size: 1.45rem; font-weight: 600; color: var(--accent); line-height: 1.35; }
+
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
+  padding: 28px 22px; display: flex; flex-direction: column; gap: 22px;
+  box-shadow: 0 10px 30px rgba(190, 110, 50, .12);
+}
+.when { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.when > div { border: 1px solid var(--line); border-radius: 12px; padding: 14px 8px; }
+.big { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.6rem, 7vw, 2.1rem); color: var(--accent); line-height: 1.1; font-variant-numeric: tabular-nums; }
+.sub { font-size: .92rem; color: var(--muted); }
+.where { font-style: normal; }
+.where b { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: var(--accent); display: block; }
+
+.count { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.count div { padding: 12px 4px; border-radius: 12px; background: var(--bg); border: 1px solid var(--line); }
+.count b { display: block; font-family: var(--font-display); font-size: clamp(1.6rem, 7vw, 2.2rem); line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; }
+.count span { font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+
+.actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.btn {
+  appearance: none; font: inherit; font-weight: 500; cursor: pointer; text-decoration: none;
+  padding: 12px 22px; border-radius: 999px; border: 1.5px solid var(--btn-edge);
+  background: linear-gradient(180deg, var(--btn-1), var(--btn-2)); color: var(--btn-ink);
+  min-height: 46px; display: inline-flex; align-items: center; justify-content: center;
+}
+.btn.ghost { background: transparent; color: var(--accent); }
+.btn.small { min-height: 36px; padding: 6px 14px; font-size: .88rem; }
+.btn:hover { filter: brightness(1.04); }
+.btn:disabled { opacity: .6; cursor: default; }
+.btn:focus-visible, .field:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.copied { min-height: 1.4em; font-size: .9rem; color: var(--muted); margin: -8px 0 0; }
+
+/* Sections with forms */
+.sec { display: flex; flex-direction: column; gap: 22px; }
+.sec h2 { font-family: var(--font-script); font-weight: 400; font-size: clamp(2.2rem, 9vw, 3rem); color: var(--accent); margin: 0; line-height: 1.15; text-wrap: balance; }
+.form { display: flex; flex-direction: column; gap: 16px; text-align: left; }
+.form label, .form legend { font-size: .9rem; color: var(--muted); display: block; margin-bottom: 4px; padding: 0; }
+.field {
+  width: 100%; font: inherit; font-size: 16px; color: var(--fg); background: var(--bg);
+  border: 1.5px solid var(--line); border-radius: 12px; padding: 12px 14px;
+}
+textarea.field { min-height: 130px; resize: vertical; line-height: 1.5; }
+fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.hint { font-size: .85rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.status { font-size: .95rem; color: var(--muted); margin: 0; min-height: 1.4em; }
+.status.err { color: var(--danger); }
+
+.choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.choice { position: relative; }
+.choice input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; }
+.choice label {
+  margin: 0; min-height: 56px; padding: 8px 6px; display: flex; align-items: center; justify-content: center;
+  text-align: center; line-height: 1.25; font-size: .95rem; color: var(--fg); cursor: pointer;
+  border: 1.5px solid var(--line); border-radius: 12px; background: var(--bg);
+}
+.choice input:focus-visible + label { outline: 3px solid var(--accent); outline-offset: 2px; }
+#r-sim:checked + label { background: var(--yes-bg); color: var(--yes-ink); border-color: var(--yes-ink); font-weight: 500; }
+#r-nao:checked + label { background: var(--no-bg); color: var(--no-ink); border-color: var(--no-ink); font-weight: 500; }
+
+.tally { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.tile { border-radius: 14px; padding: 14px 6px; display: flex; flex-direction: column; gap: 2px; }
+.tile b { font-family: var(--font-display); font-size: clamp(1.9rem, 8vw, 2.6rem); line-height: 1; font-variant-numeric: tabular-nums; }
+.tile span { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; }
+.yes { background: var(--yes-bg); color: var(--yes-ink); }
+.no { background: var(--no-bg); color: var(--no-ink); }
+
+.groups { display: flex; flex-direction: column; gap: 18px; text-align: left; }
+.g-title { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; margin: 0 0 8px; color: var(--fg); }
+.g-title small { font-family: var(--font-body); font-weight: 400; font-size: .9rem; color: var(--muted); }
+.chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; font-size: .95rem; max-width: 100%; overflow-wrap: anywhere; }
+.chip button { appearance: none; font: inherit; font-size: .78rem; cursor: pointer; background: transparent; color: inherit; border: 1px solid currentColor; border-radius: 999px; padding: 2px 8px; }
+.chip button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.chip-empty { color: var(--muted); font-size: .95rem; }
+
+/* Notes */
+.notes { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.note {
+  text-align: left; background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+  padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; min-width: 0;
+}
+.note-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.note-name { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--accent); overflow-wrap: anywhere; }
+.note-date { font-size: .82rem; color: var(--muted); }
+.note-text { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.note-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.empty { border: 1.5px dashed var(--line-strong); border-radius: 14px; padding: 22px 18px; color: var(--muted); }
+.empty b { font-family: var(--font-display); font-size: 1.3rem; color: var(--accent); display: block; }
+
+/* Falling line-art roses (outline only, no fill) */
+.rain { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+.fall { position: absolute; top: 0; left: var(--x); width: var(--s); margin-left: calc(var(--s) / -2); color: var(--rose-line); opacity: .8; will-change: transform; }
+.fall svg { display: block; width: 100%; height: auto; overflow: visible; }
+.fall { top: var(--y); }
+@media (prefers-reduced-motion: no-preference) {
+  .photo { animation: rise .8s ease-out both; }
+  .fall { top: 0; animation: fall var(--dur) linear var(--delay) infinite; }
+  .fall svg { animation: sway var(--sway-dur) ease-in-out var(--delay) infinite alternate; }
+}
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes fall { from { transform: translate3d(0, -20vh, 0); } to { transform: translate3d(var(--drift), 120vh, 0); } }
+@keyframes sway { from { transform: translateX(calc(var(--amp) * -1)) rotate(calc(var(--spin) * -1)); } to { transform: translateX(var(--amp)) rotate(var(--spin)); } }
+</style>
+</head>
+<body>
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="rosa" viewBox="0 0 100 150">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path vector-effect="non-scaling-stroke" d="M20 36C16 54 30 72 50 74C70 72 84 54 80 36"/>
+        <path vector-effect="non-scaling-stroke" d="M20 36C14 22 28 12 40 18C44 8 60 8 64 18C76 12 88 24 80 36"/>
+        <path vector-effect="non-scaling-stroke" d="M24 46C34 62 66 62 76 46"/>
+        <path vector-effect="non-scaling-stroke" d="M30 52C40 66 60 66 70 52"/>
+        <path vector-effect="non-scaling-stroke" d="M26 38C32 50 44 54 50 52C56 54 68 50 74 38"/>
+        <path vector-effect="non-scaling-stroke" d="M48 40C44 34 52 28 58 32C64 38 58 48 48 46C38 44 36 32 44 26C52 20 64 24 66 32"/>
+        <path vector-effect="non-scaling-stroke" d="M50 36C52 34 55 35 55 38"/>
+        <path vector-effect="non-scaling-stroke" d="M26 34C28 26 36 24 42 28"/>
+        <path vector-effect="non-scaling-stroke" d="M74 34C72 26 64 24 58 28"/>
+        <path vector-effect="non-scaling-stroke" d="M42 73C38 80 34 84 28 86C38 88 46 82 48 75"/>
+        <path vector-effect="non-scaling-stroke" d="M58 73C62 80 66 84 72 86C62 88 54 82 52 75"/>
+        <path vector-effect="non-scaling-stroke" d="M50 75C49 82 50 88 50 92"/>
+        <path vector-effect="non-scaling-stroke" d="M50 92C47 108 54 128 50 148"/>
+        <path vector-effect="non-scaling-stroke" d="M46 112L40 109M50 126L56 123"/>
+        <path vector-effect="non-scaling-stroke" d="M48 112C36 102 22 104 16 114C26 122 42 120 48 112Z"/>
+        <path vector-effect="non-scaling-stroke" d="M48 112C38 111 28 112 19 114"/>
+        <path vector-effect="non-scaling-stroke" d="M51 100C62 90 76 92 84 102C74 110 58 108 51 100Z"/>
+        <path vector-effect="non-scaling-stroke" d="M51 100C62 100 72 101 81 102"/>
+      </g>
+    </symbol>
+    <symbol id="petala" viewBox="0 0 60 60">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path vector-effect="non-scaling-stroke" d="M30 6C48 14 54 38 30 54C6 38 12 14 30 6Z"/>
+        <path vector-effect="non-scaling-stroke" d="M30 14C32 26 31 38 30 48"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+<div class="rain" id="rain" aria-hidden="true"></div>
+
+<main class="wrap">
+  <figure class="photo">
+    <img src="foto.jpg" width="1200" height="900" alt="Convite de aniversário de 90 anos: Rutte sorrindo, de vestido laranja de renda, entre girassóis e flores, com a frase Gratidão a Deus por todos os dias">
+  </figure>
+
+  <section class="center">
+    <div class="flourish" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 4.5 6.6 4.5c2 0 3.7 1.1 5.4 3 1.7-1.9 3.4-3 5.4-3 3.6 0 5.7 3.8 4.200 7.2C19.5 16.4 12 21 12 21z"/></svg></div>
+    <h1 class="invite">Você está convidado(a)!</h1>
+    <p class="label" style="margin-top:14px">Para o aniversário de 90 anos de</p>
+    <p class="name">Rutte Dias Brêda</p>
+  </section>
+
+  <section class="center">
+    <div class="message">
+      <p>Aos meus filhos, netos, bisnetos, sobrinhos, amigos e vizinhos.</p>
+      <p class="sweet">Hoje, aos 90 anos, quero deixar para vocês um gostinho de uma história vivida com muito amor! ❤️</p>
+    </div>
+  </section>
+
+  <section class="card center" aria-labelledby="quando">
+    <div>
+      <p class="label" id="quando">Data e horário</p>
+      <div class="when">
+        <div><div class="big">28/11</div><div class="sub">sábado, 2026</div></div>
+        <div><div class="big">11:00</div><div class="sub">da manhã</div></div>
+      </div>
+    </div>
+
+    <div class="count" id="count">
+      <div><b id="d">--</b><span>dias</span></div>
+      <div><b id="h">--</b><span>horas</span></div>
+      <div><b id="m">--</b><span>min</span></div>
+      <div><b id="s">--</b><span>seg</span></div>
+    </div>
+
+    <address class="where">
+      <p class="label">Local</p>
+      <b>Rua Dr. Pache de Farias, 46</b>
+      <span class="sub">Méier, Rio de Janeiro, RJ</span>
+    </address>
+
+    <div class="actions">
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Dr.+Pache+de+Farias+46+M%C3%A9ier+Rio+de+Janeiro+RJ" target="_blank" rel="noopener">Como chegar</a>
+      <button class="btn ghost" id="copy" type="button">Copiar endereço</button>
+    </div>
+    <p class="copied" id="copied" role="status"></p>
+  </section>
+
+  <section class="sec center" aria-labelledby="rsvp-t">
+    <div>
+      <h2 id="rsvp-t">Confirme sua presença</h2>
+    </div>
+
+    <div class="card">
+      <form class="form" id="rsvp-form" hidden novalidate>
+        <div>
+          <label for="r-nome">Seu nome</label>
+          <input class="field" id="r-nome" type="text" maxlength="60" autocomplete="name" placeholder="Como a Rutte conhece você">
+        </div>
+        <fieldset>
+          <legend>Você vai à festa?</legend>
+          <div class="choices">
+            <div class="choice"><input type="radio" name="resp" id="r-sim" value="sim"><label for="r-sim">Sim, eu vou</label></div>
+            <div class="choice"><input type="radio" name="resp" id="r-nao" value="nao"><label for="r-nao">Não poderei ir</label></div>
+          </div>
+        </fieldset>
+        <div class="row">
+          <span class="hint">Você pode mudar sua resposta depois.</span>
+          <button class="btn" id="r-send" type="submit">Confirmar resposta</button>
+        </div>
+      </form>
+      <p class="status" id="r-status" role="status">Carregando as respostas...</p>
+    </div>
+
+    <div class="tally" aria-label="Resumo das respostas">
+      <div class="tile yes"><b id="n-sim">0</b><span>Vão</span></div>
+      <div class="tile no"><b id="n-nao">0</b><span>Não vão</span></div>
+    </div>
+
+    <div class="groups" id="groups"></div>
+  </section>
+
+  <section class="sec center" aria-labelledby="mural-t">
+    <div>
+      <p class="label">Mural de carinho</p>
+      <h2 id="mural-t">Deixe um recado para a Rutte</h2>
+    </div>
+
+    <div class="card">
+      <form class="form" id="form" hidden novalidate>
+        <div>
+          <label for="nome">Seu nome</label>
+          <input class="field" id="nome" name="nome" type="text" maxlength="60" autocomplete="name" placeholder="Como a Rutte conhece você">
+        </div>
+        <div>
+          <label for="texto">Sua mensagem</label>
+          <textarea class="field" id="texto" name="texto" maxlength="500" placeholder="Escreva aqui um recado de carinho"></textarea>
+        </div>
+        <div class="row">
+          <span class="hint" id="count-txt">0 / 500</span>
+          <button class="btn" id="send" type="submit">Enviar recado</button>
+        </div>
+      </form>
+      <p class="status" id="status" role="status">Carregando o mural...</p>
+    </div>
+
+    <ul class="notes" id="notes"></ul>
+  </section>
+</main>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+import { getFirestore, collection, doc, setDoc, query, orderBy, limit, onSnapshot } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+
+import { firebaseConfig } from "./config.js";
+
+(function () {
+  /* Contagem regressiva e endereço */
+  var target = new Date("2026-11-28T11:00:00-03:00").getTime();
+  var ids = { d: document.getElementById("d"), h: document.getElementById("h"), m: document.getElementById("m"), s: document.getElementById("s") };
+  function pad(n) { return n < 10 ? "0" + n : String(n); }
+  function tick() {
+    var s = Math.floor(Math.max(0, target - Date.now()) / 1000);
+    ids.d.textContent = String(Math.floor(s / 86400));
+    ids.h.textContent = pad(Math.floor((s % 86400) / 3600));
+    ids.m.textContent = pad(Math.floor((s % 3600) / 60));
+    ids.s.textContent = pad(s % 60);
+  }
+  tick(); setInterval(tick, 1000);
+
+  var addr = "Rua Dr. Pache de Farias, 46 - Méier, Rio de Janeiro - RJ";
+  var copied = document.getElementById("copied");
+  document.getElementById("copy").addEventListener("click", function () {
+    function ok() { copied.textContent = "Endereço copiado."; }
+    function fail() { copied.textContent = addr; }
+    try { navigator.clipboard.writeText(addr).then(ok, fail); } catch (e) { fail(); }
+  });
+
+  /* Rosas amarelas caindo no fundo */
+  (function () {
+    var rain = document.getElementById("rain");
+    if (!rain) return;
+    var narrow = window.innerWidth < 600;
+    var total = narrow ? 9 : 16;
+    var ns = "http://www.w3.org/2000/svg";
+    function rnd(a, b) { return a + Math.random() * (b - a); }
+    for (var i = 0; i < total; i++) {
+      var petal = i % 4 === 3;
+      var size = petal ? rnd(24, 40) : rnd(46, 84);
+      var dur = rnd(22, 42);
+      var item = document.createElement("div");
+      item.className = "fall";
+      item.style.setProperty("--x", ((i + rnd(0.1, 0.9)) / total * 100).toFixed(1) + "%");
+      item.style.setProperty("--y", rnd(2, 92).toFixed(1) + "%");
+      item.style.setProperty("--s", size.toFixed(0) + "px");
+      item.style.setProperty("--dur", dur.toFixed(1) + "s");
+      item.style.setProperty("--delay", "-" + rnd(0, dur).toFixed(1) + "s");
+      item.style.setProperty("--drift", rnd(-60, 60).toFixed(0) + "px");
+      item.style.setProperty("--amp", rnd(14, 46).toFixed(0) + "px");
+      item.style.setProperty("--spin", rnd(8, 28).toFixed(0) + "deg");
+      item.style.setProperty("--sway-dur", rnd(4, 8).toFixed(1) + "s");
+      var svg = document.createElementNS(ns, "svg");
+      svg.setAttribute("viewBox", petal ? "0 0 60 60" : "0 0 100 150");
+      var use = document.createElementNS(ns, "use");
+      use.setAttribute("href", petal ? "#petala" : "#rosa");
+      svg.appendChild(use);
+      item.appendChild(svg);
+      rain.appendChild(item);
+    }
+  })();
+
+  /* Elementos */
+  var form = document.getElementById("form");
+  var nome = document.getElementById("nome");
+  var texto = document.getElementById("texto");
+  var send = document.getElementById("send");
+  var status = document.getElementById("status");
+  var notes = document.getElementById("notes");
+  var counter = document.getElementById("count-txt");
+  var rForm = document.getElementById("rsvp-form");
+  var rNome = document.getElementById("r-nome");
+  var rSend = document.getElementById("r-send");
+  var rStatus = document.getElementById("r-status");
+  var groupsEl = document.getElementById("groups");
+  var NAME_KEY = "rutte90-nome";
+  var db = null, uid = null, busy = false, rBusy = false, prefilled = false;
+
+  var GROUPS = [
+    { k: "sim", title: "Vão", cls: "yes", empty: "Ninguém confirmou ainda." },
+    { k: "nao", title: "Não vão", cls: "no", empty: "Ninguém avisou que não vai." }
+  ];
+  var LABELS = { sim: "Sim, eu vou", nao: "Não poderei ir" };
+
+  function setStatus(node, msg, err) { node.textContent = msg || ""; node.className = "status" + (err ? " err" : ""); }
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+  function updateCount() { counter.textContent = texto.value.length + " / 500"; }
+  texto.addEventListener("input", updateCount);
+  function fmtDate(ts) {
+    if (typeof ts !== "number") return "";
+    try { return new Date(ts).toLocaleDateString("pt-BR", { day: "numeric", month: "long" }); } catch (e) { return ""; }
+  }
+  function writeError(node, e) {
+    var code = e && e.code;
+    if (code === "permission-denied") setStatus(node, "Não foi possível salvar. Confira os campos e tente de novo.", true);
+    else setStatus(node, "Não foi possível salvar agora. Tente de novo em instantes.", true);
+  }
+
+  try {
+    var saved = localStorage.getItem(NAME_KEY);
+    if (saved) { nome.value = saved; rNome.value = saved; }
+  } catch (e) {}
+
+  /* Confirmações de presença */
+  function renderRsvp(docs) {
+    var buckets = { sim: [], nao: [] };
+    docs.forEach(function (d) {
+      var data = d.data() || {};
+      if (buckets[data.resposta]) buckets[data.resposta].push({ id: d.id, nome: String(data.nome || "Alguém especial") });
+    });
+
+    if (!prefilled && uid) {
+      prefilled = true;
+      var mine = docs.filter(function (d) { return d.id === uid; })[0];
+      if (mine) {
+        var md = mine.data() || {};
+        if (md.nome) rNome.value = String(md.nome);
+        var radio = document.getElementById("r-" + md.resposta);
+        if (radio) radio.checked = true;
+        if (LABELS[md.resposta]) setStatus(rStatus, "Sua resposta: " + LABELS[md.resposta] + ". Você pode mudar quando quiser.");
+      }
+    }
+
+    groupsEl.textContent = "";
+    GROUPS.forEach(function (g) {
+      var list = buckets[g.k].sort(function (a, b) { return a.nome.localeCompare(b.nome, "pt-BR"); });
+      document.getElementById("n-" + g.k).textContent = String(list.length);
+
+      var wrap = el("div", "group");
+      var title = el("h3", "g-title", g.title + " ");
+      title.appendChild(el("small", null, "(" + list.length + ")"));
+      wrap.appendChild(title);
+      var ul = el("ul", "chips");
+      if (!list.length) ul.appendChild(el("li", "chip-empty", g.empty));
+      list.forEach(function (p) {
+        var li = el("li", "chip " + g.cls);
+        li.appendChild(el("span", null, p.nome + (p.id === uid ? " (você)" : "")));
+        ul.appendChild(li);
+      });
+      wrap.appendChild(ul);
+      groupsEl.appendChild(wrap);
+    });
+  }
+
+  rForm.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    if (rBusy || !db || !uid) return;
+    var n = rNome.value.trim();
+    var sel = rForm.querySelector('input[name="resp"]:checked');
+    if (!n) { setStatus(rStatus, "Escreva seu nome para confirmar.", true); rNome.focus(); return; }
+    if (!sel) { setStatus(rStatus, "Escolha uma opção: sim ou não.", true); return; }
+    rBusy = true; rSend.disabled = true; setStatus(rStatus, "Salvando...");
+    var r = sel.value;
+    setDoc(doc(db, "confirmacoes", uid), { nome: n, resposta: r, ts: Date.now() }).then(function () {
+      try { localStorage.setItem(NAME_KEY, n); } catch (e) {}
+      if (r === "sim") setStatus(rStatus, "Presença confirmada. Obrigado, vai ser uma alegria ter você!");
+      else setStatus(rStatus, "Resposta salva. Vamos sentir sua falta!");
+    }, function (e) { writeError(rStatus, e); }).then(function () { rBusy = false; rSend.disabled = false; });
+  });
+
+  /* Mural de recados */
+  function renderNotes(docs) {
+    notes.textContent = "";
+    if (!docs.length) {
+      var empty = el("li", "empty");
+      empty.appendChild(el("b", null, "Nenhum recado ainda"));
+      empty.appendChild(document.createTextNode("Seja a primeira pessoa a deixar uma mensagem de carinho para a Rutte."));
+      notes.appendChild(empty);
+      return;
+    }
+    docs.forEach(function (d) {
+      var data = d.data() || {};
+      var li = el("li", "note");
+      var head = el("div", "note-head");
+      head.appendChild(el("span", "note-name", String(data.nome || "Alguém especial")));
+      head.appendChild(el("span", "note-date", fmtDate(data.ts)));
+      li.appendChild(head);
+      li.appendChild(el("p", "note-text", String(data.texto || "")));
+
+      if (d.id === uid) {
+        var actions = el("div", "note-actions");
+        var edit = el("button", "btn ghost small", "Editar meu recado");
+        edit.type = "button";
+        edit.addEventListener("click", function () {
+          nome.value = String(data.nome || "");
+          texto.value = String(data.texto || "");
+          updateCount();
+          form.hidden = false;
+          texto.focus();
+          form.scrollIntoView({ behavior: "smooth", block: "center" });
+        });
+        actions.appendChild(edit);
+        li.appendChild(actions);
+      }
+      notes.appendChild(li);
+    });
+  }
+
+  form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    if (busy || !db || !uid) return;
+    var n = nome.value.trim(), t = texto.value.trim();
+    if (!n) { setStatus(status, "Escreva seu nome para enviar o recado.", true); nome.focus(); return; }
+    if (!t) { setStatus(status, "Escreva sua mensagem para enviar o recado.", true); texto.focus(); return; }
+    busy = true; send.disabled = true; setStatus(status, "Enviando...");
+    setDoc(doc(db, "recados", uid), { nome: n, texto: t, ts: Date.now() }).then(function () {
+      try { localStorage.setItem(NAME_KEY, n); } catch (e) {}
+      texto.value = ""; updateCount();
+      setStatus(status, "Recado enviado. Obrigado pelo carinho!");
+    }, function (e) { writeError(status, e); }).then(function () { busy = false; send.disabled = false; });
+  });
+
+  async function start() {
+    if (!firebaseConfig.apiKey || String(firebaseConfig.apiKey).indexOf("COLE") === 0) {
+      setStatus(rStatus, "Falta configurar o Firebase no arquivo config.js.", true);
+      setStatus(status, "Falta configurar o Firebase no arquivo config.js.", true);
+      return;
+    }
+    var app = initializeApp(firebaseConfig);
+    db = getFirestore(app);
+    try {
+      var cred = await signInAnonymously(getAuth(app));
+      uid = cred.user.uid;
+    } catch (e) { uid = null; }
+
+    rForm.hidden = !uid;
+    form.hidden = !uid;
+    setStatus(rStatus, uid ? "" : "Não foi possível liberar o envio de respostas agora. Você ainda pode ver quem confirmou.");
+    setStatus(status, uid ? "" : "Não foi possível liberar o envio de recados agora. Você ainda pode ler o mural.");
+
+    onSnapshot(query(collection(db, "confirmacoes"), orderBy("ts", "asc"), limit(500)), function (snap) {
+      renderRsvp(snap.docs);
+    }, function () { setStatus(rStatus, "Não foi possível carregar as respostas agora.", true); });
+
+    onSnapshot(query(collection(db, "recados"), orderBy("ts", "desc"), limit(300)), function (snap) {
+      renderNotes(snap.docs);
+    }, function () { setStatus(status, "Não foi possível carregar os recados agora.", true); });
+  }
+  start();
+})();
+</script>
+</body>
+</html>
